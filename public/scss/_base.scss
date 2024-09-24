@@ -1,0 +1,89 @@
+/* -----------------------------------
+		 Base
+----------------------------------- */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+	outline: none !important;
+	list-style: none !important;
+	text-decoration: none !important;
+}
+
+*:after, 
+*:before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html{
+   scroll-behavior: smooth;
+   overflow-x: hidden;
+}
+
+body {
+    font-family:$body-font;
+    background-color: $primary-color;
+    color:$text-color;
+    font-size: $f-s-p;
+    font-weight: 400;
+    overflow-x:hidden;
+}
+p{
+  font-family:$body-font;
+  color:$text-color;
+  font-size: $f-s-p;
+  font-weight: 400;
+
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: $heading-font;
+    font-weight: 900;
+    line-height:$line-height-base;
+    color:$heading-color;
+}
+
+h1 {
+  font-size: $f-s-h1;
+}
+
+h2 {
+  font-size: $f-s-h2;
+}
+
+h3 {
+  font-size: $f-s-h3;
+}
+
+h4 {
+  font-size: $f-s-h4;
+}
+
+h5 {
+  font-size: $f-s-h5;
+}
+
+h6 {
+  font-size: $f-s-h6;
+}
+.main{
+	height: 100%;
+	margin-left:100px;
+	@include ease(0.5);
+
+}
+
+a{
+    outline: none !important;
+    color:$text-color;
+    @include ease(0.5);
+    &:hover,
+    &:focus{
+        text-decoration: none;
+    }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}

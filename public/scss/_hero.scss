@@ -1,0 +1,82 @@
+/* ------------------------------
+		 Hero
+------------------------------ */
+.hero{
+	background-size: cover;
+	background-position: center center;
+	padding-left:30px;
+	padding-right: 30px;
+	position: relative;
+	z-index: 1;
+	&__img{
+		object-fit: cover;
+	}
+  &__content{
+		display: flex;
+		justify-content:space-between;
+		flex-direction: column;
+		position: relative;
+		padding: 30px 0px;
+	}
+  &__banner{
+		position: relative;
+   
+	}
+	&__social-media{
+    .social-media__link{
+			color: $text-color  !important;
+		}
+	}
+}
+
+.banner{
+	&__subtitle{
+		font-weight: 400;
+		letter-spacing: 1px;
+		color:$text-color  !important;
+	}
+	&__title{
+		font-weight: 900;
+		color:$dark-color !important;
+		display: flex;
+		gap: 5px;
+	
+	}
+	&__desc{
+		max-width: 450px;
+		margin-top: 20px;
+		margin-bottom: 30px;
+		color:$text-color !important;
+	}
+	
+	}
+
+.info{
+	width:100%;
+	display: flex;
+	&__item{
+		padding-right: 30px;
+	}
+	&__label{
+		color:$dark-color !important;
+		font-weight: 900;
+		font-family: $heading-font;
+	}
+	&__value{
+		font-size: 15px;
+		color:$text-color !important;
+		font-weight: 400;
+	}
+}
+
+    
+
+
+	
+
+
+	
+
+
+ 
+     

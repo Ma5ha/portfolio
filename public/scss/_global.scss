@@ -1,0 +1,281 @@
+
+/* -----------------------------------
+		 Global
+----------------------------------- */
+.dot{
+  width: 4px;
+  height: 4px;
+  border-radius: $rd-full;
+  background-color: $light-color;
+  display: block;
+  margin-top: 6px;
+}
+
+.mb-24{
+  margin-bottom: 24px;
+}
+
+.mt-24{
+  margin-top: 24px;
+}
+.mt-10{
+  margin-top: 10px;
+}
+.mr-5{
+margin-right: 5px;
+}
+
+.card{
+  padding: 30px;
+  border-radius: $rd-default;
+  border:0;
+  margin-bottom: 24px;
+  @include ease(0.5);
+    &--img{
+      padding: 0;
+      margin-bottom: 24px;
+      height: 100%;
+     &:hover{
+      @include shadowLight();
+     }
+    }
+    &--white{
+      background-color:$primary-color;
+    
+      &:hover{
+        @include shadow();
+      }
+    }
+    &--light{
+      background-color: $secondary-color; 
+     
+      &:hover{
+        @include shadowLight();
+       
+      }
+    }
+}
+
+.social-media{
+  margin-bottom: 0;
+  padding-left: 0;
+  &__item{
+     display: inline-block;
+  }
+  &__link{
+    padding-right: 12px;
+    color:$text-color ;
+    &:hover{
+      color:$accent-color !important;
+    }
+  }
+}
+.section{
+  padding:100px 30px 76px 30px;
+  &--light{
+    background-color: $secondary-color;
+  }
+  &--white{
+    background-color: $primary-color;
+  }
+  &__readmore{
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 500;
+    &-link{
+        color:$accent-color !important
+    }
+  }
+}
+
+
+.heading{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 50px;
+  &__shape{
+    width:22px;
+    height:22px;
+    border-radius: $rd-full;
+    border:2px solid $heading-color;
+    display: block;
+    position: relative;
+    margin-top: 12px;
+    &:after{
+      position: absolute;
+      content:"";
+      left:-6px;
+      top:2px;
+      width:22px;
+      height:22px;
+      border-radius: $rd-full;
+      background-color:$accent-color;
+      z-index: -1;
+    }
+  }
+  &__content{
+     flex: 1;
+    h2{
+        text-transform:capitalize;
+        font-weight: 900;
+        margin-bottom: 0;
+    }
+    p{
+        text-transform: capitalize;
+        color:$muted-color;
+        margin-bottom: 0;
+    }
+  }
+
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  &--active{
+    background-color: $accent-color !important;
+    color:$white-color !important;
+    border:1px solid $accent-color !important;
+  }
+  &__number{
+    width:40px;
+    height: 40px;
+    border-radius: $rd-full;
+    border:1px solid $light-color;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 800;
+    margin-right: 6px;
+    color:$text-color;
+    background-color: $primary-color;
+    @include easeInOut(0.5);
+    &.active,
+    &:hover{
+      background-color: $accent-color !important;
+      color:$white-color;
+      border:1px solid $accent-color !important;
+    }
+  }
+}
+    
+/* ---------- Buttons ---------  */
+.btn-view{
+    border:none;
+    background-color: $accent-color;
+    font-size: 25px;
+    font-weight: 900;
+    color:$white-color;
+    border-radius: $rd-full;
+    display:block;
+    width:35px;
+    height: 35px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+      color:$white-color;
+    }
+}
+
+.btn-link{
+  border:none;
+  background-color: transparent;
+  font-size: 30px;
+  font-weight: 500;
+  color:$text-color;
+  &:hover{
+    color:$accent-color;
+  }
+}
+.btn-back{
+    border:none;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 500;
+    color:$accent-color;
+    &:hover{
+      color:$accent-color;
+    }
+}
+
+.btn-default {
+    cursor: pointer;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    position: relative;
+    background-color: $accent-color;
+    line-height: 24px;
+    border: 0;
+    color: $white-color !important;
+    font-size: $f-s-p;
+    font-weight:700;
+    padding: 10px 24px;
+    text-transform: capitalize;
+    border-radius: $rd-default;
+    z-index: 1;
+    gap: 4px;
+    @include ease(0.3);
+    i{
+      font-size: 18px;
+      margin-top: 5px;
+    }
+    
+    &::after{
+        position: absolute;
+        content:"";
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        background-color: $dark-color;
+        z-index: -1;
+        transform-origin: center;
+        transform: scale(0);
+        border-radius:$rd-default;
+        @include ease(0.3);
+    }
+    &:hover::after,
+    &:focus::after{
+        transform: scale(1);
+    }
+    &:hover,
+    &:focus{
+        color: $white-color !important;
+        outline: none;
+    }
+}
+
+.btn__submit{
+  &-spin{
+    height: 1.25rem; 
+      width: 1.25rem; 
+      border-radius: $rd-full; 
+      border-width: 0.125rem;
+      border-style: solid; 
+      border-color: $white-color; 
+      border-bottom-color: transparent;
+      animation: spin 1s linear infinite; 
+  }
+
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+

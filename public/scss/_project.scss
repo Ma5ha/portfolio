@@ -1,0 +1,111 @@
+/* ------------------------------
+		 Project
+------------------------------ */
+.project{
+	&-item{
+		@include easeInOut(0.7);
+		&__image{
+			position: relative;
+			overflow: hidden;
+			border-radius: $rd-default;
+			&__img{
+				border-radius: $rd-default;
+				@include easeInOut(0.7);
+			}
+			&__btn{
+				position: absolute;
+				top:20px;
+				left:20px;
+				opacity: 0;
+				&:hover{
+					display: block;
+				}
+			}
+		}
+		
+		&__content{
+			display: flex;
+			justify-content: space-between;
+			padding-top: 20px;
+			
+			&__title{
+				margin-bottom: 6px;
+				color:$heading-color;
+				text-transform: capitalize;
+			}
+			&__subtitle{
+				margin-bottom: 0;
+				text-transform: capitalize;
+				font-weight: 400;
+				font-size: 15px;
+			}
+		}
+
+		&__light{
+			z-index:999;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+		}
+		&:hover{
+			 box-shadow: 0px 5px 10px 0px rgba($dark-color, 0.1);
+			.project-item__image{
+					&__img{
+						transform: scale(1.2);
+					}
+					&__btn{
+						opacity: 1;
+					}
+			}
+			.project-item__content{
+				&__title{
+					color: $accent-color;
+				}
+			}
+			.btn-link{
+				color: $accent-color;
+			}
+			
+		}
+	}
+	
+	&-single{
+		&__image{
+			margin-bottom: 24px;
+			height: 100%;
+			&-img{
+        border-radius: $rd-default;
+			}
+		}
+	
+	  &__content{
+			&-desc{
+				margin-bottom: 0;
+			}
+			&-title{
+				text-transform: capitalize;
+			}
+		}
+		&__details{
+			&-list{
+				padding-left: 0;
+				margin-bottom: 0;
+			}
+			&-item{
+				margin-bottom: 12px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+			&-label{
+				font-weight: 900;
+				color:$heading-color;
+				padding-right: 5px;
+			}
+			&-value{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
