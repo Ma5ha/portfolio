@@ -15,25 +15,27 @@ import { Toaster } from "react-hot-toast";
 import Loading from "./loading";
 import { themeDefault } from "@/data/Header";
 
-
 export const metadata: Metadata = {
-  title: "Mariam - Personal Portfolio Nextjs Template",
+  title: "Mladen Blagovčanin",
   description: "",
 };
 
-export default function RootLayout({children,}: { children: React.ReactNode;}) {
-
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body   >
+      <body>
         <ThemeProvider attribute="class" defaultTheme={themeDefault.mode}>
-            <Loading/>
-            <ButtonToggle />
-            <ActiveContextSectionProvider>
-              <Header />
-              {children}
-              <Toaster position="bottom-center" />
-            </ActiveContextSectionProvider>
+          <Loading />
+          <ButtonToggle />
+          <ActiveContextSectionProvider>
+            <Header />
+            {children}
+            <Toaster position="bottom-center" />
+          </ActiveContextSectionProvider>
         </ThemeProvider>
       </body>
     </html>
