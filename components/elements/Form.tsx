@@ -2,19 +2,28 @@ import React from "react";
 import { senderEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./SubmitBtn";
 import toast from "react-hot-toast";
+import { unpackForm, validateContactForm } from "../lib/utils";
+import { ContactForm } from "@/schemes/contact-form.scheme";
 const Form = () => {
   //  const api="re_b9Koff8K_PtqMoNtW7DLrDvcqMvMZvfgU"
 
+  const handleFormSubmission = async (formData: FormData) => {
+    const form = unpackForm(formData);
+    const { success, message } = validateContactForm(form as ContactForm);
+
+    if (!success) return toast.error(message!);
+
+    const { data, error } = await senderEmail(form as ContactForm);
+    if (error) {
+      toast.error(error);
+      return;
+    }
+    toast.success("Email sent successfully!");
+  };
+
   return (
     <form
-      action={async (formData) => {
-        const { data, error } = await senderEmail(formData);
-        if (error) {
-          toast.error(error);
-          return;
-        }
-        toast.success("Email sent successfully!");
-      }}
+      action={handleFormSubmission}
       className="contact-form needs-validation card card--white"
     >
       <div className="row">
@@ -33,7 +42,7 @@ const Form = () => {
         <div className="col-md-6 mb-24">
           <input
             type="email"
-            name="senderEmail"
+            name="email"
             className="form-control contact-form__input"
             id="email"
             placeholder="Enter Your Email"
