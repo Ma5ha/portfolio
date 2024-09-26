@@ -1,4 +1,3 @@
-
 //components
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -14,10 +13,10 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
-      <Portfolio />
-      
-      <Blog/>
-      <Testimonials />
+      {/* <Portfolio /> */}
+
+      {/* <Blog/> */}
+      {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </main>
