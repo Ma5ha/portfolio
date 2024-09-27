@@ -1,38 +1,37 @@
+export const heading = {
+  title: "My Services",
+  subtitle: "I Have Worked With A Number Of Clients..",
+};
 
-export const heading={
-  title:"My Services",
-  subtitle:"I Have Worked With A Number Of Clients.."
-}
-
-export const services=[
+export const services = [
   {
-    img:"/images/services/1.png",
-    title:"App Design & Develop",
-    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit praesentium aut repellendus rem non repudiandae sint dolor illo officia dignissimos"
+    title: "Web Development",
+    desc: "Full-stack web development with modern frameworks like React, Angular, and Express. Expertise in building scalable and efficient applications.",
+    img: "",
   },
   {
-    img:"/images/services/2.png",
-    title:"Business Analysis",
-    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit praesentium aut repellendus rem non repudiandae sint dolor illo officia dignissimos"
+    title: "Frontend Development",
+    desc: "Responsive web design using HTML, CSS, JavaScript, and Tailwind CSS. Creating interactive user interfaces with a focus on user experience (UX).",
+    img: "",
   },
   {
-    img:"/images/services/3.png",
-    title:"SEO Marketing",
-    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit praesentium aut repellendus rem non repudiandae sint dolor illo officia dignissimos"
+    title: "Backend Development",
+    desc: "Building robust backend systems with Node.js, Express, and MongoDB. API development and integration for seamless communication between systems.",
+    img: "",
   },
   {
-    img:"/images/services/4.png",
-    title:"Graphic Design",
-    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit praesentium aut repellendus rem non repudiandae sint dolor illo officia dignissimos"
+    title: "Web Optimization & Performance",
+    desc: "Improving website speed, SEO optimization, and overall performance. Conducting audits and fine-tuning code for better efficiency.",
+    img: "",
   },
   {
-    img:"/images/services/5.png",
-    title:"Web Development",
-    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit praesentium aut repellendus rem non repudiandae sint dolor illo officia dignissimos"
+    title: "Custom Web Solutions",
+    desc: "Tailored solutions for business websites, e-commerce platforms, and web apps. Problem-solving for unique challenges in your digital project.",
+    img: "",
   },
   {
-    img:"/images/services/6.png",
-    title:"Branding",
-    desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit praesentium aut repellendus rem non repudiandae sint dolor illo officia dignissimos"
+    title: "Maintenance & Support",
+    desc: "Ongoing support, debugging, and updates for existing projects. Regular maintenance to ensure security and performance.",
+    img: "",
   },
-]
+];

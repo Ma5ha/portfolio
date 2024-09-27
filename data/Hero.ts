@@ -2,7 +2,7 @@ import React from "react";
 import { BsPersonCircle } from "react-icons/bs";
 
 export const bannerData = {
-  imageBg: "/images/bg/bg.jpg",
+  imageBg: "/images/bg/desk-3139127.jpg",
   subtitle: "👋 Hi There,",
   title: "I Am a ",
   words: [
@@ -36,32 +36,18 @@ export const InfoData = [
   },
 ];
 
-import {
-  BsFacebook,
-  BsTwitterX,
-  BsInstagram,
-  BsDribbble,
-  BsGithub,
-} from "react-icons/bs";
+import { BsFacebook, BsTwitterX, BsLinkedin, BsGithub } from "react-icons/bs";
 export const SocialIcons = [
   {
-    href: "#",
+    href: "https://www.facebook.com/mladen.blagovcanin.5",
     icon: React.createElement(BsFacebook),
   },
   {
-    href: "#",
-    icon: React.createElement(BsTwitterX),
+    href: "https://www.linkedin.com/in/mladen-blagovcanin-02849a1b9/",
+    icon: React.createElement(BsLinkedin),
   },
-  // {
-  //   href: "#",
-  //   icon: React.createElement(BsInstagram),
-  // },
-  // {
-  //   href: "#",
-  //   icon: React.createElement(BsDribbble),
-  // },
   {
-    href: "#",
+    href: "https://github.com/Ma5ha",
     icon: React.createElement(BsGithub),
   },
 ];

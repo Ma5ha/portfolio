@@ -170,7 +170,9 @@ img {
 .card--light:hover {
   box-shadow: 0px 5px 10px 0px rgba(52, 58, 64, 0.1);
 }
-
+.card__transparent {
+background-color: #0000008f!important;
+}
 .social-media {
   margin-bottom: 0;
   padding-left: 0;
@@ -547,6 +549,9 @@ img {
 /* ------------------------------
 		 Hero
 ------------------------------ */
+
+
+
 .hero {
   background-size: cover;
   background-position: center center;
@@ -554,10 +559,28 @@ img {
   padding-right: 30px;
   position: relative;
   z-index: 1;
+  background: radial-gradient(
+      circle at 50% 80%,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.5) 15%,
+      rgba(255, 255, 255, 0.1) 40%,
+      rgba(255, 255, 255, 0) 70%
+    ),
+    radial-gradient(
+      circle at 50% 80%,
+      rgba(255, 223, 153, 0.8) 0%,
+      rgba(255, 223, 153, 0.5) 20%,
+      rgba(255, 223, 153, 0.1) 50%,
+      rgba(255, 223, 153, 0) 80%
+    ),
+    #87CEEB;
+
+  
 }
 .hero__img {
   -o-object-fit: cover;
      object-fit: cover;
+     filter: opacity(80%);
 }
 .hero__content {
   display: flex;
@@ -568,6 +591,9 @@ img {
 }
 .hero__banner {
   position: relative;
+  display:inline-block;
+  width: fit-content;
+  background-color: #1520352a;
 }
 .hero__social-media .social-media__link {
   color: #454545 !important;
@@ -590,7 +616,6 @@ img {
   margin-bottom: 30px;
   color: #454545 !important;
 }
-
 .info {
   width: 100%;
   display: flex;
@@ -1432,4 +1457,16 @@ img {
   .dark .header--left .header__nav {
     background-color: rgb(35, 35, 35);
   }
+}
+
+.text__white {
+  color:#ffffff!important
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.fit {
+  width: fit-content;
 }

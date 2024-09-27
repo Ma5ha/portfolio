@@ -8,11 +8,11 @@ export const heading = {
 
 export const profile = {
   image: "/images/about/me.jpg",
-  title: "Hello, I am Mladen Blagovčanin, Based in BiH",
+  title: "Hello, my name is Mladen Blagovčanin",
   bio: "With nearly 4 years of experience in web development, JavaScript has become my go-to language. I have a deep understanding of the entire JS ecosystem, from building intuitive front-end interfaces to handling back-end development seamlessly.",
   list: [
     { label: "Phone :", value: "+387-066-179-390" },
-    { label: "Nationality :", value: "Serbian" },
+    // { label: "Nationality :", value: "Serbian" },
     // { label: "skype :", value: "mariam.wallas" },
     { label: "Email :", value: "blagmash@gmail.com" },
     { label: "Address :", value: "Univrzitetska, East Sarajevo" },
